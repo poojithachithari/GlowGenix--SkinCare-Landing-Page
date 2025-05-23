@@ -1,5 +1,4 @@
 # GlowGenix--SkinCare-Landing-Page
-# GlowGenix – Skincare Product Page
 
 A responsive skincare product landing page built using HTML, Tailwind CSS, and JavaScript.
 
