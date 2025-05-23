@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to custom CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <title>GlowGenix</title>
+</head>
+
+<body class="body-bg">
+    <!-- Navbar Starts -->
+    <header class="navbar">
+    <div class="navbar-container">
+
+      <div class="hamburger">
+        <button id="menu-btn">&#9776;</button>
+      </div>
+
+      <a href="#" class="logo">GlowGenix</a>
+
+      <div class="mobile-icons">
+        <img src="/Images/icons/search.svg" alt="Search" class="icon" />
+        <img src="/Images/icons/account.png" alt="Account" class="icon" />
+        <div class="cart-wrapper">
+          <img src="/Images/icons/shopping-cart.png" alt="Cart" class="icon" />
+          <span class="cart-badge">0</span>
+        </div>
+      </div>
+
+      <div class="desktop-nav">
+        <nav class="menu">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Skincare</a>
+          <a href="#">Best Sellers</a>
+        </nav>
+        <div class="desktop-icons">
+          <img src="/Images/icons/search.svg" alt="Search" class="icon" />
+          <img src="/Images/icons/account.png" alt="Account" class="icon" />
+          <div class="cart-wrapper">
+            <img src="/Images/icons/shopping-cart.png" alt="Cart" class="icon" />
+            <span class="cart-badge">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <nav>
+        <ul style="list-style: none;">
+        <li ><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Skincare</a></li>
+        <li><a href="#">Best Sellers</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+    <!-- Navbar Ends -->
+    <!-- Hero Section starts -->
+    <section class="hero-section hero-body">
+        <div class="image-section">
+            <img id="mainImage" src="Images/serum0.jpg" alt="Product" class="main-image">
+            <div class="thumbnails">
+                <img onclick="changeImage('Images/serum0.jpg')" src="Images/serum0.jpg" class="thumbnail">
+                <img onclick="changeImage('Images/serum2.jpg')" src="Images/serum2.jpg" class="thumbnail">
+                <img onclick="changeImage('Images/serum3.jpg')" src="Images/serum3.jpg" class="thumbnail">
+            </div>
+        </div>
+        <div class="info-section">
+            <div class="product-info">
+                <h1 class="product-title">Vitamin C 10% Face Serum</h1>
+
+                <!-- Rating and Tag -->
+                <div class="rating-tag">
+                    <div class="stars">★★★☆☆</div>
+                    <span class="review-count">1776 Reviews</span>
+                </div>
+
+                <div class="highlight-badge">
+                    ✨ Highly rated by customers for: <strong>glow</strong>
+                </div>
+
+                <p class="product-description">
+                    A glow-boosting daily serum with Vitamin C & Polyhydroxy Acid (PHA). Brightens and tones dull,
+                    damaged skin.
+                </p>
+
+                <!-- Benefits -->
+                <ul class="benefits-list">
+                    <li>Fragrance free</li>
+                    <li>Essential oil free</li>
+                    <li>Non-comedogenic</li>
+                </ul>
+
+                <!-- Offer -->
+                <div class="reward-badge">
+                    Earn up to 66 MCash on this purchase
+                </div>
+            </div>
+            <div class="price-box">
+                <span class="price">₹ 664</span>
+                <span class="original-price">₹ 699</span>
+                <span class="discount">5% Off</span>
+            </div>
+            <div class="actions">
+                <div class="quantity-selector">
+                    <button onclick="updateQty(-1)">−</button>
+                    <input id="qtyInput" type="number" value="1" min="1">
+                    <button onclick="updateQty(1)">+</button>
+                </div>
+                <button class="add-to-cart">ADD TO CART</button>
+            </div>
+
+            <section class="faq-container">
+                <div class="faq-item">
+                    <button onclick="toggleFaq(this)" class="faq-question">
+                        What Makes It Potent?
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>This serum contains stabilized Vitamin C along with PHA and Centella for maximum potency and
+                            effectiveness.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button onclick="toggleFaq(this)" class="faq-question">
+                        Ideal For
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Suitable for all skin types, especially those looking for brighter and more even-toned skin.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button onclick="toggleFaq(this)" class="faq-question">
+                        How to Use
+                        <span class="toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Apply 2-3 drops after cleansing and before moisturizer. Use sunscreen during the day.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </section>
+    <!-- Hero section ends -->
+    <!-- Product Features Starts -->
+    <section class="product-features-section">
+        <div class="product-features-wrapper">
+            <!-- Feature Icons Section -->
+            <div class="feature-icons">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <img src="Images/icons/doctor.png" alt="Dermatologist" />
+                    </div>
+                    <p class="feature-text">Designed by<br />Dermatologists</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <img src="Images/icons/serum.png" alt="Active Percentage" />
+                    </div>
+                    <p class="feature-text">Honest Disclosure<br />of Active Percentage</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <img src="Images/icons/verified-badge1.png" alt="Safe & Effective" />
+                    </div>
+                    <p class="feature-text">Safe &<br />Effective</p>
+                </div>
+            </div>
+
+            <!-- Expandable Description -->
+            <div class="description">
+                <p>
+                    This serum is exactly what your skin needs for a glow that turns heads.
+                    Say goodbye to blemishes, pigmentation, and uneven skin tone.
+                    With antioxidant-rich Vitamin C and deeply hydrating Hyaluronic Acid,
+                    it brightens dull skin and targets dark spots with precision.
+                    <span id="more-text" class="hidden">
+                        The 3-O-Ethyl Ascorbic Acid delivers potent results by penetrating
+                        deep within to reduce melanin production and enhance your natural radiance.
+                        It’s designed with dermatologists, making it a safe and effective choice for all skin types,
+                        ensuring transparency in active percentage and consistent performance.
+                    </span>
+                    <button id="toggle-btn">Read More</button>
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Product Features Ends -->
+    <!-- Before/after section starts -->
+<section class="results-section">
+    <h2 class="results-heading">Expected Results</h2>
+
+    <!-- Slider Container -->
+    <div id="slider-container" class="slider-container">
+        <!-- Base Image -->
+        <img src="Images/skin3.jpg" alt="Result Image" class="slider-image">
+
+        <!-- Lavender Overlay -->
+        <div id="overlay" class="slider-overlay"></div>
+
+        <!-- Slider Handle -->
+        <div id="handle" class="slider-handle">
+            <div class="handle-icon">
+                <img src="Images/icons/bottle.png" alt="Handle" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Labels -->
+    <div class="slider-labels">
+        <span id="label-day1">Day 1</span>
+        <span id="label-day5">Day 5</span>
+        <span id="label-day33">Day 33</span>
+    </div>
+</section>
+<!-- Before/after section ends -->
+
+
+
+    <!-- Testimonials section starts -->
+    <section class="testimonials-section">
+        <div class="testimonials-container">
+
+            <h2>Real People Real Stories</h2>
+
+            <div class="testimonials-grid">
+
+                <!-- Testimonial Card 1 -->
+                <div class="testimonial-card">
+                    <div class="image-stack">
+                        <div class="image-bg"></div>
+                        <img src="Images/skin0.jpg" alt="Divya" />
+                    </div>
+                    <div class="name-rating">
+                        <span>Divya</span>
+                        <img src="Images/icons/star.png" alt="star" />
+                        <span>5</span>
+                        <img src="Images/icons/verified-badge.png" alt="verified" />
+                    </div>
+                    <p class="testimonial-title">Got My Glow with 20% Vitamin C!</p>
+                    <p class="testimonial-text">
+                        My friend recommended this product as it helped her get amazing results. I was so happy to see
+                        my skin changing over the weeks.
+                    </p>
+                </div>
+
+                <!-- Testimonial Card 2 -->
+                <div class="testimonial-card">
+                    <div class="image-stack">
+                        <div class="image-bg"></div>
+                        <img src="Images/skin1.jpg" alt="Divya" />
+                    </div>
+                    <div class="name-rating">
+                        <span>Divya</span>
+                        <img src="Images/icons/star.png" alt="star" />
+                        <span>5</span>
+                        <img src="Images/icons/verified-badge.png" alt="verified" />
+                    </div>
+                    <p class="testimonial-title">This is Magical Results in 5 Weeks!</p>
+                    <p class="testimonial-text">
+                        I am nearing my 30s &amp; my skin started showing wear. In 6 weeks I saw visible results. So
+                        many benefits and NO SIDE EFFECTS!
+                    </p>
+                </div>
+
+                <!-- Testimonial Card 3 -->
+                <div class="testimonial-card">
+                    <div class="image-stack">
+                        <div class="image-bg"></div>
+                        <img src="Images/skin2.jpg" alt="Divya" />
+                    </div>
+                    <div class="name-rating">
+                        <span>Divya</span>
+                        <img src="Images/icons/star.png" alt="star" />
+                        <span>5</span>
+                        <img src="Images/icons/verified-badge.png" alt="verified" />
+                    </div>
+                    <p class="testimonial-title">Treated Pigmentation in 6 Weeks!</p>
+                    <p class="testimonial-text">
+                        Harsh sun rays damaged my skin. I used the 20% Vitamin C and got results without ANY SIDE
+                        EFFECTS! My skin now looks amazing.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials section ends -->
+    <!-- Review FAQ Additional Info Section Starts -->
+    <div class="product-info-container" >
+  <!-- Reviews Section -->
+  <section class="accordion-section details-style">
+    <details>
+      <summary>
+        Reviews <span class="icon">⌄</span>
+      </summary>
+      <div class="accordion-content">
+        <div class="reviews-header">
+          <h2>Reviews</h2>
+          <div class="rating-box">
+            <p class="rating-score">4.8</p>
+            <div class="stars">★★★★★</div>
+            <p class="review-count">2164 reviews</p>
+          </div>
+        </div>
+        <button class="review-button">Write a review</button>
+
+        <div class="review-item">
+          <div class="avatar" style="background-color: #86efac;">A</div>
+          <div class="review-body">
+            <div class="review-meta">
+              <div>
+                <p class="reviewer-name">Aiman A.</p>
+                <p class="review-location">Thane, MH</p>
+              </div>
+              <p class="review-time">5 months ago</p>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p class="review-title">Excellent!</p>
+            <video controls class="review-media">
+              <source src="sample-video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+
+        <div class="review-item">
+          <div class="avatar" style="background-color: #fca5a5;">R</div>
+          <div class="review-body">
+            <div class="review-meta">
+              <div>
+                <p class="reviewer-name">Renuka R.</p>
+                <p class="review-location">Aurangabad, MH</p>
+              </div>
+              <p class="review-time">7 months ago</p>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p class="review-title">Excellent!</p>
+            <img src="Images/skin1.jpg" alt="Review" class="review-image" />
+          </div>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- FAQs Section -->
+  <section class="accordion-section details-style" >
+    <details >
+      <summary>
+        FAQs <span class="icon">⌄</span>
+      </summary>
+      <div class="accordion-content">
+        <details>
+          <summary>What are product specifications? <span>+</span></summary>
+          <p class="faq-open">Vitamin C serum is a powerful antioxidant that neutralizes free radicals, protecting skin from photo-ageing. 
+            It also brightens skin tone and reduces signs of ageing.</p>
+        </details>
+        <details>
+          <summary>What does vitamin C serum do for the skin? <span>+</span></summary>
+          <p class="faq-open">Vitamin C serum is a powerful antioxidant that neutralizes free radicals, protecting skin from photo-ageing. It also brightens skin tone and reduces signs of ageing.</p>
+        </details>
+        <details>
+          <summary>Can I use Vitamin C in AM? <span>+</span></summary>
+          <p class="faq-open">Vitamin C serum is a powerful antioxidant that neutralizes free radicals, protecting skin from photo-ageing. It also brightens skin tone and reduces signs of ageing.</p>
+        </details>
+        <details>
+          <summary>Does this need to be refrigerated? <span>+</span></summary>
+          <p class="faq-open">Vitamin C serum is a powerful antioxidant that neutralizes free radicals, protecting skin from photo-ageing. It also brightens skin tone and reduces signs of ageing.</p>
+        </details>
+      </div>
+    </details>
+  </section>
+
+  <!-- Additional Information -->
+  <section class="accordion-section details-style">
+    <details>
+      <summary>
+        Additional Information <span class="icon">⌄</span>
+      </summary>
+      <div class="accordion-content">
+        <ul>
+          <li>Volume: 30ml</li>
+          <li>Ingredients: Vitamin C, Hyaluronic Acid, Aloe Vera</li>
+          <li>Skin Type: All skin types</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+</div>
+<!-- Review section ends -->
+    <!-- Footer starts -->
+    <footer class="footer">
+  <div class="footer-top">
+    <!-- Column 1 -->
+    <div class="footer-column">
+      <h3>Order & Support</h3>
+      <ul>
+        <li><a href="#">Track My Order</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-column">
+      <h3>Information</h3>
+      <ul>
+        <li><a href="#">Shipping & Returns</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <ul>
+        <li><a href="#">Get in touch</a></li>
+        <li><a href="#">Store Locator</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4: Newsletter -->
+    <div class="footer-column">
+      <p class="newsletter-text">
+        Stay up to date with our latest offers and product launches & be the first to get exclusive offers and sale information
+      </p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <hr class="footer-divider">
+
+  <!-- Logo + Social Icons -->
+  <div class="footer-bottom">
+    <a href="#" class="footer-logo">GlowGenix</a>
+    <div class="social-icons">
+      <a href="#"><img src="Images/icons/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="Images/icons/x.png" alt="Twitter/X"></a>
+      <a href="#"><img src="Images/icons/instagram.png" alt="Instagram"></a>
+      <a href="#"><img src="Images/icons/youtube.png" alt="YouTube"></a>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    &copy; 2025 GlowGenix Cosmetics. All rights reserved.
+  </div>
+</footer>
+
+    <!-- Footer ends -->
+    <!-- Cart Popup -->
+    <div id="cart-popup" class="cart-popup hidden">
+        <span>✅ Added to cart!</span>
+        <button onclick="closePopup()" class="close-btn">&times;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
